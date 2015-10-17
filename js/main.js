@@ -1,34 +1,27 @@
-$('.homex').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
-});
+$(document).ready(function(){
+$(window).scroll(function() {
 
-$('.aboutx').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
-});
+    if ($(this).scrollTop()>200)
+     {
+        $('#img1').css("-webkit-transform" , "translate(-200%)");
+        $('#img1').css("-webkit-transition" , "1s ease-in");
+        // window.alert("");
+     }
+     else
+     {
+        $('#img1').css("-webkit-transition" , "1s ease-in");
+        $('#img1').css("-webkit-transform" , "translate(0,0)");
+        // window.alert("");
+     }
 
-$('.orgainserx').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top -100
-    }, 500);
-    return false;
-});
+     if($(this).scrollTop()>1000)
+     {
+        $('#img2').fadeIn();
+     }
+     else{
+        $('#img2').fadeOut();
+     }
 
-$('.comittieesx').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top 
-    }, 500);
-    return false;
-});
+ });
 
-$('.contactx').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
 });
